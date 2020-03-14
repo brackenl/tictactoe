@@ -1,0 +1,62 @@
+html {
+    background-image: url('24863585.jpg');
+    text-align: center;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.button-container {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    margin: 50px auto;
+    width: 150px;
+}
+
+.grid-child {
+    border: 1px white solid;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.p1 {
+    color: blue;
+    display: inline-block;
+}
+
+.p2 {
+    color: red;
+    display: none;
+}
+
+.reset {
+    height: 30px;
+    width: 100px;
+}
+
+.stats-container {
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    padding: 5px;
+    width: 10%;
+}   
