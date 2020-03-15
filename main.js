@@ -3,7 +3,8 @@ let gameBoard = [null, null, null, null, null, null, null, null, null];
 let displayController = (() => {
     let gridContainer = document.querySelector('.grid-container');
     let statsContainer = document.querySelector('.stats-container');
-    var turn = 0;
+    let turn = 0;
+    let winner = '';
 
     function checkWin() {
         if (gameBoard === [null, null, null, null, null, null, null, null, null]) {
@@ -17,9 +18,8 @@ let displayController = (() => {
             gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X'
             ) {
                 crosses.wins++;
-                console.log(crosses.wins);
-        }
-        if (
+                setTimeout(() => {  alert(`${crosses.name} wins!`); }, 1000);
+        } else if (
             gameBoard[0] === 'O' && gameBoard[1] === 'O' && gameBoard[2] === 'O' || 
             gameBoard[3] === 'O' && gameBoard[4] === 'O' && gameBoard[5] === 'O' || 
             gameBoard[6] === 'O' && gameBoard[7] === 'O' && gameBoard[8] === 'O' || 
@@ -27,8 +27,10 @@ let displayController = (() => {
             gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O'
             ) {
                 noughts.wins++;
-                console.log(noughts.wins);
-        }
+                setTimeout(() => {  alert(`${noughts.name} wins!`); }, 1000);
+        } else if (gameBoard.indexOf(null) === -1) {
+            setTimeout(() => {  alert(`It's a draw!`); }, 1000);
+            }
     }
 
     function wipeBoard () {
